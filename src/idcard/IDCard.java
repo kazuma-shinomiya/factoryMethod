@@ -3,12 +3,14 @@ package idcard;
 import framework.Product;
 
 public class IDCard extends Product {
+    private int id;
     private String owner;
 
     //修飾子をつけないとパッケージ外から呼び出せなくなるため、インスタンス化する際に必ずFactoryが使われるようになる
-    IDCard(String owner) {
-        System.out.println(owner + "'s card");
+    IDCard(String owner, int id) {
+        System.out.println(owner + "'s card is" + id);
         this.owner = owner;
+        this.id = id;
     }
 
     @Override
@@ -23,5 +25,9 @@ public class IDCard extends Product {
 
     public String getOwner() {
         return owner;
+    }
+
+    public int getId() {
+        return id;
     }
 }
