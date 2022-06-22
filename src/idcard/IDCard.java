@@ -5,7 +5,8 @@ import framework.Product;
 public class IDCard extends Product {
     private String owner;
 
-    public IDCard(String owner) {
+    //修飾子をつけないとパッケージ外から呼び出せなくなるため、インスタンス化する際に必ずFactoryが使われるようになる
+    IDCard(String owner) {
         System.out.println(owner + "'s card");
         this.owner = owner;
     }
